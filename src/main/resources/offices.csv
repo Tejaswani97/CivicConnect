@@ -1,0 +1,20 @@
+name,municipality,city,district,state,type,lat,lng,radiusKm,address
+Greater Visakhapatnam Municipal Corporation,GVMC,Visakhapatnam,Visakhapatnam,Andhra Pradesh,CORPORATION,17.6868,83.2185,30,Visakhapatnam city
+Anakapalle Municipal Corporation,Anakapalle MC,Anakapalle,Anakapalli,Andhra Pradesh,CORPORATION,17.6910,83.0037,12,Anakapalle town
+Vijayawada Municipal Corporation,VMC,Vijayawada,NTR,Andhra Pradesh,CORPORATION,16.5062,80.6480,25,Vijayawada city
+Guntur Municipal Corporation,GMC,Guntur,Guntur,Andhra Pradesh,CORPORATION,16.3067,80.4365,20,Guntur city
+Tirupati Municipal Corporation,TMC,Tirupati,Tirupati,Andhra Pradesh,CORPORATION,13.6288,79.4192,20,Tirupati city
+Kakinada Municipal Corporation,KMC,Kakinada,Kakinada,Andhra Pradesh,CORPORATION,16.9891,82.2475,20,Kakinada city
+Nellore Municipal Corporation,NMC,Nellore,SPS Nellore,Andhra Pradesh,CORPORATION,14.4426,79.9865,20,Nellore city
+Rajamahendravaram Municipal Corporation,RMC,Rajamahendravaram,East Godavari,Andhra Pradesh,CORPORATION,17.0005,81.8040,20,Rajamahendravaram city
+Greater Hyderabad Municipal Corporation,GHMC,Hyderabad,Hyderabad,Telangana,CORPORATION,17.3850,78.4867,35,Hyderabad city
+Bruhat Bengaluru Mahanagara Palike,BBMP,Bengaluru,Bengaluru Urban,Karnataka,CORPORATION,12.9716,77.5946,30,Bengaluru city
+Greater Chennai Corporation,GCC,Chennai,Chennai,Tamil Nadu,CORPORATION,13.0827,80.2707,30,Chennai city
+Brihanmumbai Municipal Corporation,BMC,Mumbai,Mumbai,Maharashtra,CORPORATION,19.0760,72.8777,30,Mumbai city
+Municipal Corporation of Delhi,MCD,Delhi,New Delhi,Delhi,CORPORATION,28.6139,77.2090,35,Delhi
+Kolkata Municipal Corporation,KMC-K,Kolkata,Kolkata,West Bengal,CORPORATION,22.5726,88.3639,30,Kolkata city
+Pune Municipal Corporation,PMC,Pune,Pune,Maharashtra,CORPORATION,18.5204,73.8567,25,Pune city
+Ahmedabad Municipal Corporation,AMC,Ahmedabad,Ahmedabad,Gujarat,CORPORATION,23.0225,72.5714,25,Ahmedabad city
+Jaipur Municipal Corporation,JMC,Jaipur,Jaipur,Rajasthan,CORPORATION,26.9124,75.7873,25,Jaipur city
+Kochi Municipal Corporation,KMC-C,Kochi,Ernakulam,Kerala,CORPORATION,9.9312,76.2673,20,Kochi city
+Thiruvananthapuram Municipal Corporation,TMC-K,Thiruvananthapuram,Thiruvananthapuram,Kerala,CORPORATION,8.5241,76.9366,20,Thiruvananthapuram city

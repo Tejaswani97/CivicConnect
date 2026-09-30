@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CleanStreet – Report illegal dumping</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#14282b;--muted:#5d7275;--bg:#f2f5f4;--card:#fff;--line:#d8e2df;--brand:#1d6b58;--brand-d:#14503f;--warn:#b7791f;--bad:#b4432f;--info:#2c5f8a}
+*{box-sizing:border-box}body{margin:0;font:15px/1.5 "Public Sans",system-ui,sans-serif;color:var(--ink);background:var(--bg)}
+button,input,select,textarea{font:inherit}a{color:var(--brand)}
+header{background:var(--card);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:5}
+.bar{max-width:1040px;margin:auto;display:flex;align-items:center;gap:20px;padding:12px 16px}
+.logo{font-weight:700;font-size:18px;letter-spacing:-.01em;cursor:pointer;display:flex;align-items:center;gap:8px}
+.logo i{width:12px;height:12px;background:var(--brand);border-radius:3px;display:inline-block}
+nav{display:flex;gap:4px;margin-left:auto}nav button{background:none;border:0;padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer;font-weight:500}
+nav button.on{background:#e4efec;color:var(--brand-d)}
+main{max-width:1040px;margin:auto;padding:20px 16px 90px}
+h1{font-size:28px;line-height:1.2;margin:0 0 6px;letter-spacing:-.02em}h2{font-size:18px;margin:0 0 12px}.sub{color:var(--muted);margin:0 0 20px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;background:var(--card);border:1px solid var(--line);border-radius:10px;margin-bottom:22px}
+.stats div{padding:14px 16px;border-right:1px solid var(--line)}.stats div:last-child{border:0}.stats b{font-size:24px;display:block}.stats span{color:var(--muted);font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.item{cursor:pointer}.item img{width:100%;height:170px;object-fit:cover;display:block;background:#dfe8e5}
+.item .b{padding:12px 14px}.item p{margin:6px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.meta{color:var(--muted);font-size:13px}
+.pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600}
+.REPORTED{background:#f8e7e3;color:var(--bad)}.ASSIGNED{background:#e2edf6;color:var(--info)}.IN_PROGRESS{background:#f8eed9;color:var(--warn)}.COMPLETED,.RESOLVED{background:#dcf0e8;color:var(--brand-d)}.VERIFIED,.ACCEPTED{background:#e2edf6;color:var(--info)}.REOPENED,.REJECTED{background:#f8e7e3;color:var(--bad)}
+.panel{max-width:520px;margin:10px auto;padding:22px}
+label{display:block;font-weight:600;margin:14px 0 5px}input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff}
+input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
+.btn{background:var(--brand);color:#fff;border:0;padding:11px 18px;border-radius:8px;font-weight:600;cursor:pointer;margin-top:16px}.btn:hover{background:var(--brand-d)}
+.btn.alt{background:#fff;color:var(--brand-d);border:1px solid var(--line)}.btn.block{width:100%}.btn:disabled{opacity:.6;cursor:wait}
+.msg{margin-top:12px;padding:10px 12px;border-radius:8px;background:#f8e7e3;color:var(--bad);font-size:14px}.msg.ok{background:#dcf0e8;color:var(--brand-d)}
+.tabs{display:flex;margin-bottom:14px;border-bottom:1px solid var(--line)}.tabs button{flex:1;background:none;border:0;padding:10px;font-weight:600;color:var(--muted);border-bottom:2px solid transparent;cursor:pointer}.tabs button.on{color:var(--brand-d);border-color:var(--brand)}
+.drop{border:1.5px dashed #a9bdb8;border-radius:10px;padding:16px;text-align:center;background:#fafcfb;cursor:pointer;display:block;font-weight:500}.drop img{max-width:100%;max-height:220px;border-radius:8px;display:block;margin:0 auto 8px}
+.loc{display:flex;gap:10px;align-items:center;padding:10px 12px;border:1px solid var(--line);border-radius:8px;font-size:14px;background:#fafcfb}
+.modal{position:fixed;inset:0;background:rgba(15,30,32,.55);display:flex;align-items:flex-start;justify-content:center;overflow:auto;padding:24px 12px;z-index:20}
+.sheet{background:var(--card);border-radius:12px;max-width:640px;width:100%;overflow:hidden}.sheet>img{width:100%;max-height:320px;object-fit:cover;display:block}.sheet .b{padding:18px}
+.tl{list-style:none;margin:14px 0 0;padding:0 0 0 18px;border-left:2px solid var(--line)}.tl li{position:relative;padding:0 0 16px 14px}.tl li:before{content:"";position:absolute;left:-25px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--brand);border:2px solid #fff;box-shadow:0 0 0 1px var(--line)}
+.tl img{max-width:220px;border-radius:8px;margin-top:6px;display:block}
+.row{display:flex;gap:8px}.row>*{flex:1}.x{float:right;background:none;border:0;font-size:22px;cursor:pointer;color:var(--muted)}
+.empty{text-align:center;color:var(--muted);padding:40px 10px}
+@media(max-width:700px){h1{font-size:23px}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+ header nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);margin:0;padding:6px;justify-content:space-around}nav button{flex:1;padding:10px 4px;font-size:13px}.bar{gap:8px}}
+@media(prefers-reduced-motion:no-preference){.card{transition:box-shadow .15s}.item:hover{box-shadow:0 4px 14px rgba(20,40,43,.1)}}
+</style></head><body>
+<header><div class="bar"><div class="logo" onclick="go('feed')"><i></i>CleanStreet</div><nav id="nav"></nav></div></header>
+<main id="app"></main><div id="modal"></div>
+<script>
+const $=s=>document.querySelector(s),LBL={REPORTED:'Reported',VERIFIED:'Verified',ASSIGNED:'Assigned',ACCEPTED:'Accepted',IN_PROGRESS:'In progress',COMPLETED:'Completed',RESOLVED:'Resolved',REOPENED:'Reopened',REJECTED:'Rejected'};
+let S={token:localStorage.tok||null,user:JSON.parse(localStorage.usr||'null'),view:'feed',tab:'login',loc:null,photo:null,phone:''};
+const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const ago=t=>{const m=(Date.now()-new Date(t))/6e4;return m<1?'just now':m<60?Math.round(m)+' min ago':m<1440?Math.round(m/60)+' h ago':new Date(t).toLocaleDateString('en-IN',{day:'numeric',month:'short'})};
+async function api(p,o={}){const h={...(o.headers||{})};if(S.token)h.Authorization='Bearer '+S.token;if(o.json){h['Content-Type']='application/json';o.body=JSON.stringify(o.json)}
+ const r=await fetch('/api'+p,{...o,headers:h});const d=await r.json().catch(()=>({}));if(!r.ok){if(r.status==401&&S.token)logout(true);throw new Error(d.error||'Something went wrong')}return d}
+const msg=(id,t,ok)=>{const e=$('#'+id);if(e)e.innerHTML=t?`<div class="msg ${ok?'ok':''}">${esc(t)}</div>`:''};
+function go(v){S.view=v;render()}
+function logout(x){if(S.token&&!x)api('/auth/logout',{method:'POST'}).catch(()=>{});S.token=null;S.user=null;localStorage.clear();S.view='login';render()}
+async function loadProtectedImages(root=document){
+  const imgs=[...root.querySelectorAll('[data-media]')];
+  await Promise.all(imgs.map(async img=>{
+    const path=img.dataset.media;
+    if(!path || !S.token) return;
+    try{
+      const r=await fetch(path,{headers:{Authorization:'Bearer '+S.token}});
+      if(!r.ok) return;
+      const blob=await r.blob();
+      img.src=URL.createObjectURL(blob);
+    }catch(e){}
+  }));
+}
+
+function nav(){const u=S.user,n=[['feed','Public feed']];
+ if(u){if(u.role=='CITIZEN')n.push(['report','Report'],['mine','My reports']);else n.push(['mine',u.role=='OFFICER'?'Office dashboard':'My tasks']);n.push(['out','Log out ('+u.name.split(' ')[0]+')'])}else n.push(['login','Log in']);
+ $('#nav').innerHTML=n.map(([k,l])=>`<button class="${S.view==k?'on':''}" onclick="${k=='out'?'logout()':`go('${k}')`}">${l}</button>`).join('')}
+function render(){nav();({feed:feed,report:report,mine:mine,login:login}[S.view]||feed)();scrollTo(0,0)}
+const card=c=>`<div class="card item" onclick="${S.view=='feed'?`trackView('${c.number}')`:`open_(${c.id})`}">${c.imagePath ? `<img data-media="${c.imagePath}" alt="Dumping site" loading="lazy">` : `<div style="height:170px;background:linear-gradient(135deg,#dfe8e5,#f4f7f6);display:flex;align-items:center;justify-content:center;color:#5d7275;font-weight:600">Evidence photo protected</div>`}<div class="b"><span class="pill ${c.status}">${LBL[c.status]}</span> <span class="meta">${c.number} · ${esc(c.category)}</span><p>${esc(c.description)}</p><div class="meta">${esc(c.officeName)} · ${ago(c.createdAt)}</div></div></div>`;
+async function feed(){
+  $('#app').innerHTML=`<h1>Clean streets start with a report</h1>
+  <p class="sub">Complaints are routed to the configured municipal office that serves the location. Track one with its number.</p>
+  <div class="card" style="padding:14px;margin-bottom:16px">
+    <div class="row">
+      <input id="tn" placeholder="Track a complaint, e.g. CS-2026-000123">
+      <button class="btn" style="margin:0;flex:0 0 auto" onclick="trackView($('#tn').value)">Track</button>
+    </div>
+  </div>
+  <div id="st"></div>
+  <div class="grid" id="list"></div>`;
+
+  const [s,l]=await Promise.all([api('/stats'),api('/complaints')]),
+        b=s.byStatus;
+
+  const prog=b.VERIFIED+b.ASSIGNED+b.ACCEPTED+b.IN_PROGRESS,
+        done=b.COMPLETED+b.RESOLVED;
+
+  $('#st').innerHTML=`<div class="stats">
+    <div><b>${s.total}</b><span>Complaints</span></div>
+    <div><b>${b.REPORTED}</b><span>Reported</span></div>
+    <div><b>${prog}</b><span>In progress</span></div>
+    <div><b>${done}</b><span>Resolved</span></div>
+  </div>`;
+
+  $('#list').innerHTML=l.length
+    ? l.map(card).join('')
+    : '<div class="empty" style="grid-column:1/-1">No complaints yet. Be the first to report a dumping site.</div>';
+
+  await loadProtectedImages($('#list'));
+}
+function login(){const r=S.tab=='register',v=S.tab=='otp';
+ $('#app').innerHTML=`<div class="card panel">${v?'':`<div class="tabs"><button class="${!r?'on':''}" onclick="S.tab='login';login()">Log in</button><button class="${r?'on':''}" onclick="S.tab='register';login()">Create account</button></div>`}
+ ${v?`<h2>Verify your mobile number</h2><p class="sub">Enter the 6-digit verification code sent to +91 XXXXXX${esc(String(S.phone).slice(-4))}.</p><label>OTP</label><input id="otp" inputmode="numeric" maxlength="6" autocomplete="one-time-code"><div id="m"></div><button class="btn block" onclick="verify()">Verify and continue</button><button class="btn alt block" onclick="resend()">Resend OTP</button>`
+ :`${r?'<label>Full name</label><input id="nm" autocomplete="name">':''}<label>Mobile number</label><input id="ph" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="tel"><label>Password</label><input id="pw" type="password" autocomplete="${r?'new-password':'current-password'}"><div id="m"></div><button class="btn block" onclick="${r?'register()':'doLogin()'}">${r?'Send OTP':'Log in'}</button><p class="meta" style="margin-top:14px">Municipal officers and cleaning staff log in here with the credentials given by their office.</p>`}</div>`}
+async function register(){try{const d=await api('/auth/register',{method:'POST',json:{name:$('#nm').value,phone:$('#ph').value,password:$('#pw').value}});S.phone=$('#ph').value;S.tab='otp';login();msg('m',d.message,1)}catch(e){msg('m',e.message)}}
+async function resend(){try{const d=await api('/auth/resend',{method:'POST',json:{phone:S.phone}});msg('m',d.message,1)}catch(e){msg('m',e.message)}}
+function start(d){S.token=d.token;S.user=d.user;localStorage.tok=d.token;localStorage.usr=JSON.stringify(d.user);S.tab='login';go(d.user.role=='CITIZEN'?'report':'mine')}
+async function verify(){try{start(await api('/auth/verify',{method:'POST',json:{phone:S.phone,otp:$('#otp').value}}))}catch(e){msg('m',e.message)}}
+async function doLogin(){try{start(await api('/auth/login',{method:'POST',json:{phone:$('#ph').value,password:$('#pw').value}}))}catch(e){msg('m',e.message);if(/Verify/.test(e.message)){S.phone=$('#ph').value}}}
+function report(){if(!S.user)return go('login');S.loc=null;S.photo=null;
+ $('#app').innerHTML=`<div class="card panel"><h2>Report illegal dumping</h2><p class="sub">Add a photo and your location. We send it to the nearest municipal office.</p>
+ <label>Photo of the site</label><label class="drop" id="dz"><input id="img" type="file" accept="image/*" capture="environment" hidden onchange="pick(this)">Take or choose a photo</label>
+ <label>Location</label><div class="loc"><span id="lt" style="flex:1">Location not captured yet</span><button class="btn alt" style="margin:0" onclick="gps()">Use my location</button></div>
+ <label>Category</label><select id="cat"></select><label>What is the issue?</label><textarea id="ds" rows="3" maxlength="900" placeholder="e.g. Construction debris and household waste blocking the drain"></textarea><div id="m"></div><button class="btn block" id="sb" onclick="submitC()">Submit complaint</button></div>`;api('/categories').then(l=>$('#cat').innerHTML=l.map(c=>`<option>${esc(c)}</option>`).join(''));gps()}
+function pick(i){const f=i.files[0];if(!f)return;S.photo=f;$('#dz').innerHTML=`<img src="${URL.createObjectURL(f)}" alt="Selected photo">Change photo`;$('#dz').append(i)}
+function gps(){$('#lt').textContent='Finding your location…';if(!navigator.geolocation)return $('#lt').textContent='Location is not supported on this device';
+ navigator.geolocation.getCurrentPosition(p=>{S.loc=[p.coords.latitude,p.coords.longitude];$('#lt').innerHTML=`${S.loc[0].toFixed(5)}, ${S.loc[1].toFixed(5)} (±${Math.round(p.coords.accuracy)} m)`},()=>$('#lt').textContent='Allow location access in your browser, then try again',{enableHighAccuracy:true,timeout:15000})}
+async function submitC(){if(!S.photo)return msg('m','Add a photo of the dumping site');if(!S.loc)return msg('m','Capture your location first');if($('#ds').value.trim().length<10)return msg('m','Describe the issue in at least 10 characters');
+ const f=new FormData();f.append('image',S.photo);f.append('lat',S.loc[0]);f.append('lng',S.loc[1]);f.append('description',$('#ds').value);f.append('category',$('#cat').value);$('#sb').disabled=true;
+ try{const c=await api('/complaints',{method:'POST',body:f});go('mine');open_(c.id)}catch(e){msg('m',e.message);$('#sb').disabled=false}}
+async function mine(){if(!S.user)return go('login');const o=S.user.role=='OFFICER';$('#app').innerHTML=`<h1>${o?'Complaints for your office':S.user.role=='CREW'?'Cleaning tasks assigned to you':'My reports'}</h1><p class="sub" id="ss"></p><div class="grid" id="list"></div>`;
+ const l=await api('/complaints/mine');$('#ss').textContent=l.length+' complaint'+(l.length==1?'':'s');
+ $('#list').innerHTML=l.length?l.map(card).join(''):`<div class="empty" style="grid-column:1/-1">${S.user.role=='CITIZEN'?'You have not reported anything yet.':'Nothing here yet.'}</div>`; await loadProtectedImages($('#list'))}
+async function open_(id){const {complaint:c,timeline:t}=await api('/complaints/'+id),u=S.user;let act='';
+ const f2=(v,l)=>`<option value="${v}">${l}</option>`,opts={OFFICER:{REPORTED:['VERIFIED','REJECTED'],VERIFIED:['REJECTED'],COMPLETED:['RESOLVED','REOPENED']},CREW:{ASSIGNED:['ACCEPTED'],ACCEPTED:['IN_PROGRESS'],IN_PROGRESS:['COMPLETED']},CITIZEN:{RESOLVED:['REOPENED']}}[u&&u.role]?.[c.status]||[];
+ if(u&&u.role=='OFFICER'&&['VERIFIED','ASSIGNED','ACCEPTED','IN_PROGRESS','REOPENED'].includes(c.status)){const st=await api('/officer/staff');act=`<label>${c.staffId?'Reassign to':'Assign crew'}</label><div class="row"><select id="sf">${st.map(s=>`<option value="${s.id}">${esc(s.name)}</option>`).join('')}</select><button class="btn" style="margin:0;flex:0 0 auto" onclick="assign(${c.id})">Assign</button></div>`}
+ if(opts.length)act+=`<label>Update status</label><select id="us">${opts.map(o=>f2(o,LBL[o])).join('')}</select><input id="un" placeholder="Remarks (required for reject / reopen)" style="margin-top:8px"><label class="drop" style="margin-top:8px"><input id="ui" type="file" accept="image/*" capture="environment" style="display:none" onchange="this.parentNode.lastChild.textContent=this.files[0].name"><span>Add photo (required to complete work)</span></label><button class="btn block" onclick="post(${c.id})">Save update</button>`;
+ $('#modal').innerHTML=`<div class="modal" onclick="if(event.target==this)this.remove()"><div class="sheet"><img data-media="${c.imagePath}" alt="Dumping site"><div class="b"><button class="x" aria-label="Close" onclick="$('.modal').remove()">×</button><span class="pill ${c.status}">${LBL[c.status]}</span> <span class="meta">${c.number} · ${esc(c.category)} · ${c.priority} priority${c.dueAt&&!['RESOLVED','COMPLETED'].includes(c.status)?' · due '+new Date(c.dueAt).toLocaleString('en-IN',{day:'numeric',month:'short',hour:'2-digit',minute:'2-digit'}):''}</span><h2 style="margin-top:10px">${esc(c.description)}</h2>
+ <div class="meta">Reported by ${esc(c.reporterName)} · ${ago(c.createdAt)} · ${esc(c.officeName)}${c.staffName?' · Crew: '+esc(c.staffName):''}<br><a target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=${c.lat}&mlon=${c.lng}#map=17/${c.lat}/${c.lng}">View location on map</a></div>
+ <ul class="tl">${t.map(x=>`<li><b>${LBL[x.status]}</b> <span class="meta">${ago(x.createdAt)} · ${esc(x.byName)} (${x.byRole.toLowerCase()})</span>${x.note?`<div>${esc(x.note)}</div>`:''}${x.imagePath?`<img data-media="${x.imagePath}" alt="Update photo">`:''}</li>`).reverse().join('')}</ul>${act}<div id="m"></div></div></div></div>`; await loadProtectedImages($('.sheet'))}
+async function trackView(n){try{const t=await api('/track/'+encodeURIComponent(n.trim()));
+ $('#modal').innerHTML=`<div class="modal" onclick="if(event.target==this)this.remove()"><div class="sheet">${t.beforePhoto ? `<img src="${t.beforePhoto}" alt="Site photo">` : `<div style="padding:28px;text-align:center;color:#5d7275;background:#f4f7f6;font-weight:600">Evidence photos are visible to authorized users only.</div>`}<div class="b"><button class="x" aria-label="Close" onclick="$('.modal').remove()">×</button><span class="pill ${t.status}">${LBL[t.status]}</span> <span class="meta">${t.number} · ${esc(t.category)}</span><h2 style="margin-top:10px">${esc(t.office)}</h2><div class="meta">Reported ${ago(t.createdAt)} · <a target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=${t.lat}&mlon=${t.lng}#map=16/${t.lat}/${t.lng}">General area on map</a></div><ul class="tl">${t.timeline.map(x=>`<li><b>${LBL[x.status]}</b> <span class="meta">${ago(x.createdAt)} · ${esc(x.by.toLowerCase())}</span>${x.note?`<div>${esc(x.note)}</div>`:''}${x.imagePath?`<img data-media="${x.imagePath}" alt="Evidence photo">`:''}</li>`).reverse().join('')}</ul></div></div></div>`; await loadProtectedImages($('.sheet'))}catch(e){alert(e.message)}}
+async function assign(id){try{await api(`/officer/complaints/${id}/assign`,{method:'POST',json:{staffId:+$('#sf').value}});$('.modal').remove();open_(id);if(S.view=='mine')mine()}catch(e){msg('m',e.message)}}
+async function post(id){const f=new FormData();f.append('status',$('#us').value);f.append('note',$('#un').value);if($('#ui').files[0])f.append('image',$('#ui').files[0]);
+ try{await api(`/complaints/${id}/updates`,{method:'POST',body:f});$('.modal').remove();open_(id);if(S.view=='mine')mine()}catch(e){msg('m',e.message)}}
+document.addEventListener('keydown',e=>{if(e.key=='Escape')$('.modal')?.remove()});
+S.view=S.user&&S.user.role!='CITIZEN'?'mine':'feed';render();
+</script></body></html>
