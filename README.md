@@ -38,7 +38,7 @@ export OTP_PROVIDER=dev
 mvn spring-boot:run      # http://localhost:8080
 mvn test
 ```
-**Real WhatsApp OTP (recommended for the portfolio demo):** create a Wakit account, copy the API key, then run with `OTP_PROVIDER=wakit` and `WAKIT_API_KEY=...`. Wakit's OTP API sends the code through WhatsApp and returns a message ID used by CleanStreet for verification. New Wakit workspaces currently advertise free starter messages; after the free allowance, sending is prepaid. See the provider docs for current limits/pricing. For offline demos, `OTP_PROVIDER=dev` accepts `123456` and sends nothing. Twilio remains available with `OTP_PROVIDER=twilio` if you have a configured Verify service. Delete `./data` if upgrading from the first version.
+**Real WhatsApp OTP :** create a Wakit account, copy the API key, then run with `OTP_PROVIDER=wakit` and `WAKIT_API_KEY=...`. Wakit's OTP API sends the code through WhatsApp and returns a message ID used by CleanStreet for verification. New Wakit workspaces currently advertise free starter messages; after the free allowance, sending is prepaid. See the provider docs for current limits/pricing. For offline demos, `OTP_PROVIDER=dev` accepts `123456` and sends nothing. Twilio remains available with `OTP_PROVIDER=twilio` if you have a configured Verify service. Delete `./data` if upgrading from the first version.
 
 ## Demo accounts (password `demo123`)
 Officer `+919000000010` (Visakhapatnam), crew `+919000000011` / `+919000000012`, admin `+919000099999`. Set `app.seed-demo-users=false` in production.
@@ -53,4 +53,4 @@ BCrypt passwords, server-side role and ownership checks on complaint endpoints, 
 Admin panel UI (office/category/user management), in-app notifications, Spring Security/JWT migration, Leaflet embedded map, reverse geocoding, officer filters and overdue views, integration tests, Docker.
 
 ## Screenshots
-_Add screenshots here._
+
