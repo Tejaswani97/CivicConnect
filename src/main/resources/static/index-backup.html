@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>CivicConnect – Cleaner communities, better tomorrow</title>
+<title>CleanStreet – Report illegal dumping</title>
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -24,8 +24,6 @@ h1{font-size:28px;line-height:1.2;margin:0 0 6px;letter-spacing:-.02em}h2{font-s
 .item .b{padding:12px 14px}.item p{margin:6px 0;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}.meta{color:var(--muted);font-size:13px}
 .pill{display:inline-block;padding:2px 9px;border-radius:99px;font-size:12px;font-weight:600}
 .REPORTED{background:#f8e7e3;color:var(--bad)}.ASSIGNED{background:#e2edf6;color:var(--info)}.IN_PROGRESS{background:#f8eed9;color:var(--warn)}.COMPLETED,.RESOLVED{background:#dcf0e8;color:var(--brand-d)}.VERIFIED,.ACCEPTED{background:#e2edf6;color:var(--info)}.REOPENED,.REJECTED{background:#f8e7e3;color:var(--bad)}
-.dashboard{max-width:1040px;margin:auto;padding:12px 0 40px}.dash-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px}.dash-head h1{margin-bottom:4px}.dash-actions{display:flex;gap:8px}.dash-actions .btn{margin:0}.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}.dash-stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.dash-stat .icon{font-size:22px;margin-bottom:10px}.dash-stat b{display:block;font-size:28px;line-height:1.1}.dash-stat span{color:var(--muted);font-size:13px}.dash-section{margin-top:26px}.dash-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.dash-section-head h2{margin:0}.dash-link{border:0;background:none;color:var(--brand);font-weight:700;cursor:pointer}.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.quick-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;cursor:pointer;transition:transform .15s,box-shadow .15s}.quick-card:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(20,40,43,.08)}.quick-card .qicon{font-size:28px}.quick-card h3{margin:10px 0 5px}.quick-card p{margin:0;color:var(--muted);font-size:14px}.recent-list{display:grid;gap:10px}.recent-item{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer}.recent-item:hover{border-color:#b8cbc5}.recent-main{min-width:0}.recent-main b{display:block;margin-bottom:3px}.recent-main span{color:var(--muted);font-size:13px}.dash-empty{background:#fff;border:1px dashed #b9c9c5;border-radius:14px;padding:30px;text-align:center;color:var(--muted)}@media(max-width:700px){.dashboard{padding:0 0 80px}.dash-head{display:block}.dash-actions{margin-top:14px}.dash-stats{grid-template-columns:1fr}.quick-grid{grid-template-columns:1fr}.recent-item{align-items:flex-start;flex-direction:column}.recent-item .pill{align-self:flex-start}}
-
 .panel{max-width:520px;margin:10px auto;padding:22px}
 label{display:block;font-weight:600;margin:14px 0 5px}input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff}
 input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
@@ -41,20 +39,11 @@ input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid v
 .tl img{max-width:220px;border-radius:8px;margin-top:6px;display:block}
 .row{display:flex;gap:8px}.row>*{flex:1}.x{float:right;background:none;border:0;font-size:22px;cursor:pointer;color:var(--muted)}
 .empty{text-align:center;color:var(--muted);padding:40px 10px}
-
-body.landing-mode{background:#fff}body.landing-mode main{max-width:none;width:100%;margin:0;padding:0}body.landing-mode header{position:fixed;top:0;left:0;right:0;background:linear-gradient(180deg,rgba(0,0,0,.42),rgba(0,0,0,0));border:0;z-index:30}body.landing-mode .bar{max-width:1180px;padding:18px 24px}body.landing-mode .logo{color:#fff}body.landing-mode .logo i{background:#9be5c7}body.landing-mode nav button{color:rgba(255,255,255,.9)}body.landing-mode nav button:hover{background:rgba(255,255,255,.12);color:#fff}body.landing-mode nav button.on{background:rgba(255,255,255,.15);color:#fff}.landing{margin:0;min-height:100vh}.hero{min-height:100svh;height:100svh;width:100%;position:relative;display:flex;align-items:center;overflow:hidden;background:linear-gradient(90deg,rgba(9,35,31,.88) 0%,rgba(9,35,31,.58) 48%,rgba(9,35,31,.18) 100%),url('https://images.livemint.com/img/2020/08/21/1600x900/SwacchBharatMission1-kCmB--621x414%40LiveMint_1597991362918.jpg') center center/cover}.hero-in{max-width:1040px;width:100%;margin:auto;padding:70px 16px;color:#fff;position:relative;z-index:2}.eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(255,255,255,.28);border-radius:99px;background:rgba(255,255,255,.12);backdrop-filter:blur(8px);font-size:13px;font-weight:600}.eyebrow i{width:8px;height:8px;border-radius:50%;background:#9be5c7;display:inline-block}.hero h1{font-size:clamp(38px,6vw,66px);max-width:680px;line-height:1.04;margin:20px 0 16px;letter-spacing:-.045em}.hero p{font-size:18px;line-height:1.65;max-width:600px;color:rgba(255,255,255,.86);margin:0 0 28px}.hero-actions{display:flex;gap:12px;flex-wrap:wrap}.hero .btn{margin:0;padding:13px 20px}.hero .btn.alt{background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.4);color:#fff;backdrop-filter:blur(8px)}.hero .btn.alt:hover{background:rgba(255,255,255,.18)}.hero-note{margin-top:16px;font-size:13px;color:rgba(255,255,255,.68)}
-.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.12),rgba(0,0,0,.28));pointer-events:none}
-.hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:3;color:rgba(255,255,255,.82);font-size:12px;letter-spacing:.08em;text-transform:uppercase;text-align:center}
-.hero-scroll span{display:block;margin-top:5px;font-size:18px;animation:floatDown 1.6s ease-in-out infinite}
-@keyframes floatDown{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
-
-.awareness{padding:54px 16px}.awareness-inner{max-width:1040px;margin:auto}.section-kicker{color:var(--brand);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}.section-title{font-size:32px;line-height:1.2;margin:0 0 10px;letter-spacing:-.025em}.section-sub{color:var(--muted);max-width:650px;margin:0 0 28px}.awareness-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.awareness-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.awareness-card .pic{height:180px;background-position:center;background-size:cover}.awareness-card .content{padding:18px}.awareness-card h3{margin:0 0 7px;font-size:17px}.awareness-card p{margin:0;color:var(--muted);font-size:14px}.steps-section{padding:64px 16px;background:#f7faf9}.steps-inner{max-width:1040px;margin:auto}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.step b{font-size:13px;color:var(--brand);letter-spacing:.1em}.step h3{margin:16px 0 6px}.step p{margin:0;color:var(--muted);font-size:14px}.categories-section{padding:64px 16px}.categories-inner{max-width:1040px;margin:auto}.category-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.category-list span{padding:12px 16px;border:1px solid var(--line);border-radius:99px;background:#fff;font-weight:600;font-size:14px}.track-band{margin-top:0}.
-.track-band{background:#173f37;color:#fff;padding:38px 16px}.track-inner{max-width:1040px;margin:auto;display:flex;align-items:center;gap:28px;justify-content:space-between}.track-copy h2{margin:0 0 6px;font-size:24px}.track-copy p{margin:0;color:rgba(255,255,255,.72)}.track-form{display:flex;gap:8px;min-width:min(470px,100%)}.track-form input{border:0;min-width:0}.track-form .btn{margin:0;background:#fff;color:var(--brand-d)}.footer-note{padding:24px 16px 50px;text-align:center;color:var(--muted);font-size:13px}@media(max-width:700px){.hero{min-height:100svh;height:100svh;background-position:60% center}.hero-in{padding:52px 16px}.hero p{font-size:16px}.awareness{padding:42px 16px}.awareness-grid{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr}.track-inner{display:block}.track-form{margin-top:18px;min-width:0}}
 @media(max-width:700px){h1{font-size:23px}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  header nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);margin:0;padding:6px;justify-content:space-around}nav button{flex:1;padding:10px 4px;font-size:13px}.bar{gap:8px}}
 @media(prefers-reduced-motion:no-preference){.card{transition:box-shadow .15s}.item:hover{box-shadow:0 4px 14px rgba(20,40,43,.1)}}
 </style></head><body>
-<header><div class="bar"><div class="logo" onclick="go(S.user?(S.user.role=='CITIZEN'?'dashboard':'mine'):'landing')"><i></i>CivicConnect</div><nav id="nav"></nav></div></header>
+<header><div class="bar"><div class="logo" onclick="go('feed')"><i></i>CleanStreet</div><nav id="nav"></nav></div></header>
 <main id="app"></main><div id="modal"></div>
 <script>
 const $=s=>document.querySelector(s),LBL={REPORTED:'Reported',VERIFIED:'Verified',ASSIGNED:'Assigned',ACCEPTED:'Accepted',IN_PROGRESS:'In progress',COMPLETED:'Completed',RESOLVED:'Resolved',REOPENED:'Reopened',REJECTED:'Rejected'};
@@ -80,14 +69,13 @@ async function loadProtectedImages(root=document){
   }));
 }
 
-function nav(){const u=S.user,n=S.view=='landing'?(u?[]:[['login','Log in']]):[['feed','Public feed']];
- if(u){if(u.role=='CITIZEN')n.push(['dashboard','Dashboard'],['report','Report'],['mine','My reports']);else n.push(['mine',u.role=='OFFICER'?'Office dashboard':'My tasks']);n.push(['out','Log out ('+u.name.split(' ')[0]+')'])}else if(S.view!='landing')n.push(['login','Log in']);
- if(S.view=='landing'&&!u)n.push(['register','Create account']);
- $('#nav').innerHTML=n.map(([k,l])=>`<button class="${S.view==k?'on':''}" onclick="${k=='out'?'logout()':k=='register'?"S.tab='register';go('login')":`go('${k}')`}">${l}</button>`).join('')}
-function render(){document.body.classList.toggle('landing-mode',S.view=='landing');nav();({landing:landing,dashboard:dashboard,feed:feed,report:report,mine:mine,login:login}[S.view]||landing)();scrollTo(0,0)}
+function nav(){const u=S.user,n=[['feed','Public feed']];
+ if(u){if(u.role=='CITIZEN')n.push(['report','Report'],['mine','My reports']);else n.push(['mine',u.role=='OFFICER'?'Office dashboard':'My tasks']);n.push(['out','Log out ('+u.name.split(' ')[0]+')'])}else n.push(['login','Log in']);
+ $('#nav').innerHTML=n.map(([k,l])=>`<button class="${S.view==k?'on':''}" onclick="${k=='out'?'logout()':`go('${k}')`}">${l}</button>`).join('')}
+function render(){nav();({feed:feed,report:report,mine:mine,login:login}[S.view]||feed)();scrollTo(0,0)}
 const card=c=>`<div class="card item" onclick="${S.view=='feed'?`trackView('${c.number}')`:`open_(${c.id})`}">${c.imagePath ? `<img data-media="${c.imagePath}" alt="Dumping site" loading="lazy">` : `<div style="height:170px;background:linear-gradient(135deg,#dfe8e5,#f4f7f6);display:flex;align-items:center;justify-content:center;color:#5d7275;font-weight:600">Evidence photo protected</div>`}<div class="b"><span class="pill ${c.status}">${LBL[c.status]}</span> <span class="meta">${c.number} · ${esc(c.category)}</span><p>${esc(c.description)}</p><div class="meta">${esc(c.officeName)} · ${ago(c.createdAt)}</div></div></div>`;
 async function feed(){
-  $('#app').innerHTML=`<h1>Civic issues start with a report</h1>
+  $('#app').innerHTML=`<h1>Clean streets start with a report</h1>
   <p class="sub">Complaints are routed to the configured municipal office that serves the location. Track one with its number.</p>
   <div class="card" style="padding:14px;margin-bottom:16px">
     <div class="row">
@@ -113,96 +101,24 @@ async function feed(){
 
   $('#list').innerHTML=l.length
     ? l.map(card).join('')
-    : '<div class="empty" style="grid-column:1/-1">No complaints yet. Be the first to report a civic issue.</div>';
+    : '<div class="empty" style="grid-column:1/-1">No complaints yet. Be the first to report a dumping site.</div>';
 
   await loadProtectedImages($('#list'));
 }
-function landing(){
-  $('#app').innerHTML=`<div class="landing">
-    <section class="hero"><div class="hero-in">
-      <div class="eyebrow"><i></i> Building cleaner, connected communities</div>
-      <h1>Cleaner communities. Better tomorrow.</h1>
-      <p>CivicConnect helps citizens report local issues, connect them with the right municipal workflow, and follow what happens next.</p>
-      <div class="hero-actions"><button class="btn" onclick="S.tab='register';go('login')">Create account</button><button class="btn alt" onclick="S.tab='login';go('login')">Log in</button></div>
-      <div class="hero-note">Your report, your voice, your community.</div><div class="hero-scroll">Explore CivicConnect<span>↓</span></div>
-    </div></section>
-    <section class="awareness"><div class="awareness-inner">
-      <div class="section-kicker">What CivicConnect does</div><h2 class="section-title">One place to report, track and improve your community</h2>
-      <p class="section-sub">CivicConnect connects citizens with the configured municipal workflow so a reported issue can move from a photo and location to verification, assignment and resolution.</p>
-      <div class="awareness-grid">
-        <article class="awareness-card"><div class="pic" style="background-image:url('https://pbs.twimg.com/media/HGhJRY-bsAANtC7.jpg')"></div><div class="content"><h3>Report with evidence</h3><p>Add a photo, location and category so the issue is clear and actionable.</p></div></article>
-        <article class="awareness-card"><div class="pic" style="background-image:url('https://drop.ndtv.com/albums/NEWS/mere10guzcleanupdrive/kota%2C-rajasthan.jpg')"></div><div class="content"><h3>Connect to the right office</h3><p>Reports are routed using the configured service area and nearest active office.</p></div></article>
-        <article class="awareness-card"><div class="pic" style="background-image:url('https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=900&q=80')"></div><div class="content"><h3>Follow the progress</h3><p>Track status changes from reporting through assignment, work and resolution.</p></div></article>
-      </div>
-    </div></section>
-
-    <section class="steps-section"><div class="steps-inner">
-      <div><div class="section-kicker">How it works</div><h2 class="section-title">From problem to progress</h2><p class="section-sub">A simple workflow designed around evidence, accountability and visibility.</p></div>
-      <div class="steps-grid">
-        <div class="step"><b>01</b><h3>Report</h3><p>Capture the issue with a photo, location and description.</p></div>
-        <div class="step"><b>02</b><h3>Route</h3><p>The system identifies the configured office serving that location.</p></div>
-        <div class="step"><b>03</b><h3>Resolve</h3><p>Officers and crew update progress while the citizen can track it.</p></div>
-      </div>
-    </div></section>
-
-    <section class="categories-section"><div class="categories-inner">
-      <div class="section-kicker">Civic awareness</div><h2 class="section-title">Everyday issues deserve attention</h2>
-      <div class="category-list"><span>♻️ Waste & litter</span><span>🚰 Drainage & water</span><span>🛣️ Public spaces</span><span>🌳 Community cleanliness</span><span>🏙️ Local civic issues</span></div>
-    </div></section>
-
-    <section class="track-band"><div class="track-inner"><div class="track-copy"><h2>Already reported an issue?</h2><p>Enter your complaint number to check its latest status.</p></div><div class="track-form"><input id="landingTrack" placeholder="e.g. CS-2026-000123"><button class="btn" onclick="trackView($('#landingTrack').value)">Track</button></div></div></section>
-
-    <div class="footer-note">CivicConnect · Report responsibly. Keep your community cleaner.</div>
-  </div>`;
-}
-
 function login(){const r=S.tab=='register',v=S.tab=='otp';
  $('#app').innerHTML=`<div class="card panel">${v?'':`<div class="tabs"><button class="${!r?'on':''}" onclick="S.tab='login';login()">Log in</button><button class="${r?'on':''}" onclick="S.tab='register';login()">Create account</button></div>`}
  ${v?`<h2>Verify your mobile number</h2><p class="sub">Enter the 6-digit verification code sent to +91 XXXXXX${esc(String(S.phone).slice(-4))}.</p><label>OTP</label><input id="otp" inputmode="numeric" maxlength="6" autocomplete="one-time-code"><div id="m"></div><button class="btn block" onclick="verify()">Verify and continue</button><button class="btn alt block" onclick="resend()">Resend OTP</button>`
  :`${r?'<label>Full name</label><input id="nm" autocomplete="name">':''}<label>Mobile number</label><input id="ph" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="tel"><label>Password</label><input id="pw" type="password" autocomplete="${r?'new-password':'current-password'}"><div id="m"></div><button class="btn block" onclick="${r?'register()':'doLogin()'}">${r?'Send OTP':'Log in'}</button><p class="meta" style="margin-top:14px">Municipal officers and cleaning staff log in here with the credentials given by their office.</p>`}</div>`}
 async function register(){try{const d=await api('/auth/register',{method:'POST',json:{name:$('#nm').value,phone:$('#ph').value,password:$('#pw').value}});S.phone=$('#ph').value;S.tab='otp';login();msg('m',d.message,1)}catch(e){msg('m',e.message)}}
 async function resend(){try{const d=await api('/auth/resend',{method:'POST',json:{phone:S.phone}});msg('m',d.message,1)}catch(e){msg('m',e.message)}}
-function start(d){S.token=d.token;S.user=d.user;localStorage.tok=d.token;localStorage.usr=JSON.stringify(d.user);S.tab='login';go(d.user.role=='CITIZEN'?'dashboard':'mine')}
+function start(d){S.token=d.token;S.user=d.user;localStorage.tok=d.token;localStorage.usr=JSON.stringify(d.user);S.tab='login';go(d.user.role=='CITIZEN'?'report':'mine')}
 async function verify(){try{start(await api('/auth/verify',{method:'POST',json:{phone:S.phone,otp:$('#otp').value}}))}catch(e){msg('m',e.message)}}
 async function doLogin(){try{start(await api('/auth/login',{method:'POST',json:{phone:$('#ph').value,password:$('#pw').value}}))}catch(e){msg('m',e.message);if(/Verify/.test(e.message)){S.phone=$('#ph').value}}}
-async function dashboard(){
-  if(!S.user)return go('login');
-  if(S.user.role!='CITIZEN')return go('mine');
-  $('#app').innerHTML=`<div class="dashboard">
-    <div class="dash-head">
-      <div><div class="section-kicker">Citizen dashboard</div><h1>Welcome back, ${esc(S.user.name.split(' ')[0])} 👋</h1><p class="sub">See your reports, track progress, or report a new civic issue.</p></div>
-      <div class="dash-actions"><button class="btn" onclick="go('report')">+ Report issue</button></div>
-    </div>
-    <div class="dash-stats">
-      <div class="dash-stat"><div class="icon">📋</div><b id="dcTotal">—</b><span>Total reports</span></div>
-      <div class="dash-stat"><div class="icon">🔄</div><b id="dcActive">—</b><span>In progress</span></div>
-      <div class="dash-stat"><div class="icon">✓</div><b id="dcDone">—</b><span>Resolved</span></div>
-    </div>
-    <div class="dash-section"><div class="dash-section-head"><h2>What would you like to do?</h2></div>
-      <div class="quick-grid">
-        <div class="quick-card" onclick="go('report')"><div class="qicon">📸</div><h3>Report a civic issue</h3><p>Upload a photo, share your location, and tell us what needs attention.</p></div>
-        <div class="quick-card" onclick="go('mine')"><div class="qicon">📍</div><h3>Track my reports</h3><p>View your submitted complaints and follow their status and timeline.</p></div>
-      </div>
-    </div>
-    <div class="dash-section"><div class="dash-section-head"><h2>Recent reports</h2><button class="dash-link" onclick="go('mine')">View all →</button></div><div id="recentReports"></div></div>
-  </div>`;
-  try{
-    const l=await api('/complaints/mine');
-    const active=l.filter(c=>['REPORTED','VERIFIED','ASSIGNED','ACCEPTED','IN_PROGRESS','REOPENED'].includes(c.status)).length;
-    const done=l.filter(c=>['COMPLETED','RESOLVED'].includes(c.status)).length;
-    $('#dcTotal').textContent=l.length; $('#dcActive').textContent=active; $('#dcDone').textContent=done;
-    const recent=l.slice(0,4);
-    $('#recentReports').innerHTML=recent.length?`<div class="recent-list">${recent.map(c=>`<div class="recent-item" onclick="open_(${c.id})"><div class="recent-main"><b>${esc(c.number)}</b><span>${esc(c.category)} · ${ago(c.createdAt)}</span></div><span class="pill ${c.status}">${LBL[c.status]}</span></div>`).join('')}</div>`:`<div class="dash-empty">You haven't reported anything yet.<br><button class="btn" style="margin-top:14px" onclick="go('report')">Report your first issue</button></div>`;
-  }catch(e){
-    $('#recentReports').innerHTML=`<div class="msg">${esc(e.message)}</div>`;
-  }
-}
-
 function report(){if(!S.user)return go('login');S.loc=null;S.photo=null;
- $('#app').innerHTML=`<div class="card panel"><h2>Report a civic issue</h2><p class="sub">Add a photo and your location. We route the report to the nearest configured municipal office.</p>
+ $('#app').innerHTML=`<div class="card panel"><h2>Report illegal dumping</h2><p class="sub">Add a photo and your location. We send it to the nearest municipal office.</p>
  <label>Photo of the site</label><label class="drop" id="dz"><input id="img" type="file" accept="image/*" capture="environment" hidden onchange="pick(this)">Take or choose a photo</label>
  <label>Location</label><div class="loc"><span id="lt" style="flex:1">Location not captured yet</span><button class="btn alt" style="margin:0" onclick="gps()">Use my location</button></div>
- <label>Category</label><select id="cat"></select><label>What is the issue?</label><textarea id="ds" rows="3" maxlength="900" placeholder="e.g. Waste dumped near a drain and blocking the walkway"></textarea><div id="m"></div><button class="btn block" id="sb" onclick="submitC()">Submit complaint</button></div>`;api('/categories').then(l=>$('#cat').innerHTML=l.map(c=>`<option>${esc(c)}</option>`).join(''));gps()}
+ <label>Category</label><select id="cat"></select><label>What is the issue?</label><textarea id="ds" rows="3" maxlength="900" placeholder="e.g. Construction debris and household waste blocking the drain"></textarea><div id="m"></div><button class="btn block" id="sb" onclick="submitC()">Submit complaint</button></div>`;api('/categories').then(l=>$('#cat').innerHTML=l.map(c=>`<option>${esc(c)}</option>`).join(''));gps()}
 function pick(i){const f=i.files[0];if(!f)return;S.photo=f;$('#dz').innerHTML=`<img src="${URL.createObjectURL(f)}" alt="Selected photo">Change photo`;$('#dz').append(i)}
 function gps(){$('#lt').textContent='Finding your location…';if(!navigator.geolocation)return $('#lt').textContent='Location is not supported on this device';
  navigator.geolocation.getCurrentPosition(p=>{S.loc=[p.coords.latitude,p.coords.longitude];$('#lt').innerHTML=`${S.loc[0].toFixed(5)}, ${S.loc[1].toFixed(5)} (±${Math.round(p.coords.accuracy)} m)`},()=>$('#lt').textContent='Allow location access in your browser, then try again',{enableHighAccuracy:true,timeout:15000})}
@@ -225,5 +141,5 @@ async function assign(id){try{await api(`/officer/complaints/${id}/assign`,{meth
 async function post(id){const f=new FormData();f.append('status',$('#us').value);f.append('note',$('#un').value);if($('#ui').files[0])f.append('image',$('#ui').files[0]);
  try{await api(`/complaints/${id}/updates`,{method:'POST',body:f});$('.modal').remove();open_(id);if(S.view=='mine')mine()}catch(e){msg('m',e.message)}}
 document.addEventListener('keydown',e=>{if(e.key=='Escape')$('.modal')?.remove()});
-S.view=S.user?(S.user.role!='CITIZEN'?'mine':'dashboard'):'landing';render();
+S.view=S.user&&S.user.role!='CITIZEN'?'mine':'feed';render();
 </script></body></html>
