@@ -10,6 +10,8 @@ import java.io.IOException;
 import java.nio.file.*;
 import java.time.*;
 import java.util.*;
+import java.util.LinkedHashMap;
+import java.util.Map;
 
 @RestController @RequestMapping("/api")
 public class ApiController {
@@ -28,7 +30,7 @@ public class ApiController {
   @PostMapping("/auth/register")
   public Map<String, Object> register(@RequestBody Map<String, String> b) {
     String phone = phone(b.get("phone")), name = clean(b.get("name")), pw = b.get("password");
-    if (name.length() < 2 || pw == null || !strongPassword(pw)) throw bad("Use a password with at least 8 characters, including a letter and a number");
+    if (name.length() < 2 || pw == null || !strongPassword(pw)) throw bad("Password must be 8+ characters and include uppercase, lowercase, number and special character");
     User u = users.findByPhone(phone).orElse(new User());
     if (u.verified) throw new ResponseStatusException(HttpStatus.CONFLICT, "This number is already registered. Log in instead.");
     u.name = name; u.phone = phone; u.role = "CITIZEN"; u.passwordHash = enc.encode(pw); u.failedLoginAttempts = 0; u.lockedUntil = null;
@@ -73,6 +75,40 @@ public class ApiController {
   // ---------- Complaints ----------
   @GetMapping("/categories")
   public List<String> categories() { return cats().keySet().stream().toList(); }
+
+  /**
+   * Location preview for citizens. Returns the nearest active configured office
+   * plus its distance and whether the point is inside that office's service area.
+   */
+  @GetMapping("/offices/nearest")
+  public Map<String, Object> nearestOffice(@RequestHeader(value = "Authorization", required = false) String h,
+                                           @RequestParam double lat, @RequestParam double lng) {
+    auth(h);
+    if (Double.isNaN(lat) || Double.isNaN(lng) || lat < -90 || lat > 90 || lng < -180 || lng > 180) {
+      throw bad("Invalid coordinates");
+    }
+    Office o = offices.nearestAny(lat, lng)
+        .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "No active municipal office is configured"));
+    double distanceKm = OfficeService.km(lat, lng, o.lat, o.lng);
+    Map<String, Object> result = new LinkedHashMap<>();
+
+    result.put("id", o.id);
+    result.put("name", o.name);
+    result.put("municipality", o.municipality);
+    result.put("city", o.city);
+    result.put("district", o.district);
+    result.put("state", o.state);
+    result.put("type", o.type);
+    result.put("address", o.address == null ? "" : o.address);
+    result.put("lat", o.lat);
+    result.put("lng", o.lng);
+    result.put("distanceKm", Math.round(distanceKm * 100) / 100.0);
+    result.put("serviceRadiusKm", o.serviceRadiusKm);
+    result.put("withinServiceArea", distanceKm <= o.serviceRadiusKm);
+    result.put("active", o.active);
+
+    return result;
+  }
 
   @PostMapping(value = "/complaints", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
   public Complaint create(@RequestHeader(value = "Authorization", required = false) String h, @RequestParam double lat, @RequestParam double lng,
@@ -184,7 +220,7 @@ public class ApiController {
     return u;
   }
 
-  private boolean strongPassword(String p) { return p != null && p.length() >= 8 && p.length() <= 128 && p.matches(".*[A-Za-z].*") && p.matches(".*\\d.*"); }
+  private boolean strongPassword(String p) { return p != null && p.length() >= 8 && p.length() <= 128 && p.matches(".*[A-Z].*") && p.matches(".*[a-z].*") && p.matches(".*\\d.*") && p.matches(".*[^A-Za-z0-9].*"); }
   private void enforceComplaintRateLimit(User u) {
     Instant now = Instant.now();
     List<Instant> list = complaintAttempts.computeIfAbsent(String.valueOf(u.id), k -> new ArrayList<>());

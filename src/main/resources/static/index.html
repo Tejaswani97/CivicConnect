@@ -26,6 +26,8 @@ h1{font-size:28px;line-height:1.2;margin:0 0 6px;letter-spacing:-.02em}h2{font-s
 .REPORTED{background:#f8e7e3;color:var(--bad)}.ASSIGNED{background:#e2edf6;color:var(--info)}.IN_PROGRESS{background:#f8eed9;color:var(--warn)}.COMPLETED,.RESOLVED{background:#dcf0e8;color:var(--brand-d)}.VERIFIED,.ACCEPTED{background:#e2edf6;color:var(--info)}.REOPENED,.REJECTED{background:#f8e7e3;color:var(--bad)}
 .dashboard{max-width:1040px;margin:auto;padding:12px 0 40px}.dash-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:24px}.dash-head h1{margin-bottom:4px}.dash-actions{display:flex;gap:8px}.dash-actions .btn{margin:0}.dash-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-bottom:22px}.dash-stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.dash-stat .icon{font-size:22px;margin-bottom:10px}.dash-stat b{display:block;font-size:28px;line-height:1.1}.dash-stat span{color:var(--muted);font-size:13px}.dash-section{margin-top:26px}.dash-section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}.dash-section-head h2{margin:0}.dash-link{border:0;background:none;color:var(--brand);font-weight:700;cursor:pointer}.quick-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.quick-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;cursor:pointer;transition:transform .15s,box-shadow .15s}.quick-card:hover{transform:translateY(-2px);box-shadow:0 7px 20px rgba(20,40,43,.08)}.quick-card .qicon{font-size:28px}.quick-card h3{margin:10px 0 5px}.quick-card p{margin:0;color:var(--muted);font-size:14px}.recent-list{display:grid;gap:10px}.recent-item{display:flex;align-items:center;justify-content:space-between;gap:15px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer}.recent-item:hover{border-color:#b8cbc5}.recent-main{min-width:0}.recent-main b{display:block;margin-bottom:3px}.recent-main span{color:var(--muted);font-size:13px}.dash-empty{background:#fff;border:1px dashed #b9c9c5;border-radius:14px;padding:30px;text-align:center;color:var(--muted)}@media(max-width:700px){.dashboard{padding:0 0 80px}.dash-head{display:block}.dash-actions{margin-top:14px}.dash-stats{grid-template-columns:1fr}.quick-grid{grid-template-columns:1fr}.recent-item{align-items:flex-start;flex-direction:column}.recent-item .pill{align-self:flex-start}}
 
+
+.officer-dashboard{max-width:1040px;margin:auto;padding:12px 0 40px}.off-head{display:flex;align-items:flex-end;justify-content:space-between;gap:20px;margin-bottom:22px}.off-head h1{margin-bottom:4px}.off-actions{display:flex;gap:8px}.off-actions .btn{margin:0}.off-stats{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:24px}.off-stat{background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}.off-stat .icon{font-size:21px;margin-bottom:9px}.off-stat b{display:block;font-size:27px;line-height:1.1}.off-stat span{display:block;color:var(--muted);font-size:13px;margin-top:4px}.off-section{margin-top:26px}.off-section-head{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:12px}.off-section-head h2{margin:0}.off-queue{display:grid;gap:10px}.off-row{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer}.off-row:hover{border-color:#b8cbc5;box-shadow:0 3px 12px rgba(20,40,43,.06)}.off-row-main{min-width:0}.off-row-main b{display:block;margin-bottom:3px}.off-row-main span{display:block;color:var(--muted);font-size:13px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.off-row-side{text-align:right;white-space:nowrap}.off-priority{font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--bad);margin-bottom:4px}.off-empty{background:#fff;border:1px dashed #b9c9c5;border-radius:14px;padding:28px;text-align:center;color:var(--muted)}@media(max-width:700px){.off-head{display:block}.off-actions{margin-top:14px}.off-stats{grid-template-columns:1fr 1fr}.off-row{align-items:flex-start}.off-row-side{text-align:left}.off-row-main span{white-space:normal}}
 .panel{max-width:520px;margin:10px auto;padding:22px}
 label{display:block;font-weight:600;margin:14px 0 5px}input,select,textarea{width:100%;padding:10px 12px;border:1px solid var(--line);border-radius:8px;background:#fff}
 input:focus,select:focus,textarea:focus,button:focus-visible{outline:2px solid var(--brand);outline-offset:1px}
@@ -48,15 +50,57 @@ body.landing-mode{background:#fff}body.landing-mode main{max-width:none;width:10
 .hero-scroll span{display:block;margin-top:5px;font-size:18px;animation:floatDown 1.6s ease-in-out infinite}
 @keyframes floatDown{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
 
-.awareness{padding:54px 16px}.awareness-inner{max-width:1040px;margin:auto}.section-kicker{color:var(--brand);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}.section-title{font-size:32px;line-height:1.2;margin:0 0 10px;letter-spacing:-.025em}.section-sub{color:var(--muted);max-width:650px;margin:0 0 28px}.awareness-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.awareness-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.awareness-card .pic{height:180px;background-position:center;background-size:cover}.awareness-card .content{padding:18px}.awareness-card h3{margin:0 0 7px;font-size:17px}.awareness-card p{margin:0;color:var(--muted);font-size:14px}.steps-section{padding:64px 16px;background:#f7faf9}.steps-inner{max-width:1040px;margin:auto}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.step b{font-size:13px;color:var(--brand);letter-spacing:.1em}.step h3{margin:16px 0 6px}.step p{margin:0;color:var(--muted);font-size:14px}.categories-section{padding:64px 16px}.categories-inner{max-width:1040px;margin:auto}.category-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.category-list span{padding:12px 16px;border:1px solid var(--line);border-radius:99px;background:#fff;font-weight:600;font-size:14px}.track-band{margin-top:0}.
-.track-band{background:#173f37;color:#fff;padding:38px 16px}.track-inner{max-width:1040px;margin:auto;display:flex;align-items:center;gap:28px;justify-content:space-between}.track-copy h2{margin:0 0 6px;font-size:24px}.track-copy p{margin:0;color:rgba(255,255,255,.72)}.track-form{display:flex;gap:8px;min-width:min(470px,100%)}.track-form input{border:0;min-width:0}.track-form .btn{margin:0;background:#fff;color:var(--brand-d)}.footer-note{padding:24px 16px 50px;text-align:center;color:var(--muted);font-size:13px}@media(max-width:700px){.hero{min-height:100svh;height:100svh;background-position:60% center}.hero-in{padding:52px 16px}.hero p{font-size:16px}.awareness{padding:42px 16px}.awareness-grid{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr}.track-inner{display:block}.track-form{margin-top:18px;min-width:0}}
+.awareness{padding:54px 16px}.awareness-inner{max-width:1040px;margin:auto}.section-kicker{color:var(--brand);font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.12em;margin-bottom:8px}.section-title{font-size:32px;line-height:1.2;margin:0 0 10px;letter-spacing:-.025em}.section-sub{color:var(--muted);max-width:650px;margin:0 0 28px}.awareness-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.awareness-card{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden}.awareness-card .pic{height:180px;background-position:center;background-size:cover}.awareness-card .content{padding:18px}.awareness-card h3{margin:0 0 7px;font-size:17px}.awareness-card p{margin:0;color:var(--muted);font-size:14px}.steps-section{padding:64px 16px;background:#f7faf9}.steps-inner{max-width:1040px;margin:auto}.steps-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:30px}.step{background:#fff;border:1px solid var(--line);border-radius:14px;padding:24px}.step b{font-size:13px;color:var(--brand);letter-spacing:.1em}.step h3{margin:16px 0 6px}.step p{margin:0;color:var(--muted);font-size:14px}.categories-section{padding:64px 16px}.categories-inner{max-width:1040px;margin:auto}.category-list{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}.category-list span{padding:12px 16px;border:1px solid var(--line);border-radius:99px;background:#fff;font-weight:600;font-size:14px}.track-band{margin-top:0}
+.track-gap{height:28px;background:#fff}.track-top{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.track-band{background:#173f37;color:#fff;padding:38px 16px}.track-inner{max-width:1040px;margin:auto;display:flex;align-items:center;gap:28px;justify-content:space-between}.track-copy h2{margin:0 0 6px;font-size:24px}.track-copy p{margin:0;color:rgba(255,255,255,.72)}.track-form{display:flex;gap:8px;min-width:min(470px,100%)}.track-form input{border:0;min-width:0}.track-form .btn{margin:0;background:#fff;color:var(--brand-d)}.footer-note{padding:24px 16px 50px;text-align:center;color:var(--muted);font-size:13px}@media(max-width:700px){.hero{min-height:100svh;height:100svh;background-position:60% center}.hero-in{padding:52px 16px}.hero p{font-size:16px}.awareness{padding:42px 16px}.awareness-grid{grid-template-columns:1fr}.steps-grid{grid-template-columns:1fr}.track-inner{display:block}.track-form{margin-top:18px;min-width:0}}
 @media(max-width:700px){h1{font-size:23px}.stats{grid-template-columns:1fr 1fr}.stats div:nth-child(2){border-right:0}.stats div:nth-child(-n+2){border-bottom:1px solid var(--line)}
  header nav{position:fixed;bottom:0;left:0;right:0;background:#fff;border-top:1px solid var(--line);margin:0;padding:6px;justify-content:space-around}nav button{flex:1;padding:10px 4px;font-size:13px}.bar{gap:8px}}
 @media(prefers-reduced-motion:no-preference){.card{transition:box-shadow .15s}.item:hover{box-shadow:0 4px 14px rgba(20,40,43,.1)}}
+.password-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.password-wrap input {
+  width: 100%;
+  padding-right: 50px;
+}
+
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 18px;
+  padding: 5px;
+}
+
+.password-rules {
+  margin: 8px 0 14px;
+  padding-left: 20px;
+  font-size: 13px;
+}
+
+.password-rules li {
+  color: #777;
+  margin: 3px 0;
+}
+
+.password-rules li.ok {
+  color: #16834b;
+  font-weight: 600;
+}
 </style></head><body>
-<header><div class="bar"><div class="logo" onclick="go(S.user?(S.user.role=='CITIZEN'?'dashboard':'mine'):'landing')"><i></i>CivicConnect</div><nav id="nav"></nav></div></header>
+<header><div class="bar"><div class="logo" onclick="go(S.user?(S.user.role=='CITIZEN'?'dashboard':S.user.role=='OFFICER'?'officer':'mine'):'landing')"><i></i>CivicConnect</div><nav id="nav"></nav></div></header>
 <main id="app"></main><div id="modal"></div>
 <script>
+  let otpTimer = null;
+  let otpExpiresAt = 0;
 const $=s=>document.querySelector(s),LBL={REPORTED:'Reported',VERIFIED:'Verified',ASSIGNED:'Assigned',ACCEPTED:'Accepted',IN_PROGRESS:'In progress',COMPLETED:'Completed',RESOLVED:'Resolved',REOPENED:'Reopened',REJECTED:'Rejected'};
 let S={token:localStorage.tok||null,user:JSON.parse(localStorage.usr||'null'),view:'feed',tab:'login',loc:null,photo:null,phone:''};
 const esc=s=>String(s??'').replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
@@ -64,6 +108,54 @@ const ago=t=>{const m=(Date.now()-new Date(t))/6e4;return m<1?'just now':m<60?Ma
 async function api(p,o={}){const h={...(o.headers||{})};if(S.token)h.Authorization='Bearer '+S.token;if(o.json){h['Content-Type']='application/json';o.body=JSON.stringify(o.json)}
  const r=await fetch('/api'+p,{...o,headers:h});const d=await r.json().catch(()=>({}));if(!r.ok){if(r.status==401&&S.token)logout(true);throw new Error(d.error||'Something went wrong')}return d}
 const msg=(id,t,ok)=>{const e=$('#'+id);if(e)e.innerHTML=t?`<div class="msg ${ok?'ok':''}">${esc(t)}</div>`:''};
+function clearOtpTimer() {
+  if (otpTimer) {
+    clearInterval(otpTimer);
+    otpTimer = null;
+  }
+
+  otpExpiresAt = 0;
+}
+function startOtpTimer() {
+  clearOtpTimer();
+
+  otpExpiresAt = Date.now() + (5 * 60 * 1000);
+
+  const tick = () => {
+    const left = Math.max(0, otpExpiresAt - Date.now());
+    const seconds = Math.ceil(left / 1000);
+
+    const minutes = Math.floor(seconds / 60);
+    const secs = String(seconds % 60).padStart(2, "0");
+
+    const timer = document.getElementById("otpTimer");
+    const verifyBtn = document.getElementById("verifyBtn");
+    const resendBtn = document.getElementById("resendBtn");
+
+    if (timer) {
+      timer.textContent = left
+        ? `Code expires in ${minutes}:${secs}`
+        : "Code expired. Request a new one.";
+    }
+
+    if (verifyBtn) {
+      verifyBtn.disabled = !left;
+    }
+
+    if (resendBtn) {
+      resendBtn.disabled = !!left;
+    }
+
+    if (!left) {
+      clearOtpTimer();
+    }
+  };
+
+  tick();
+  otpTimer = setInterval(tick, 250);
+}
+
+
 function go(v){S.view=v;render()}
 function logout(x){if(S.token&&!x)api('/auth/logout',{method:'POST'}).catch(()=>{});S.token=null;S.user=null;localStorage.clear();S.view='login';render()}
 async function loadProtectedImages(root=document){
@@ -81,10 +173,10 @@ async function loadProtectedImages(root=document){
 }
 
 function nav(){const u=S.user,n=S.view=='landing'?(u?[]:[['login','Log in']]):[['feed','Public feed']];
- if(u){if(u.role=='CITIZEN')n.push(['dashboard','Dashboard'],['report','Report'],['mine','My reports']);else n.push(['mine',u.role=='OFFICER'?'Office dashboard':'My tasks']);n.push(['out','Log out ('+u.name.split(' ')[0]+')'])}else if(S.view!='landing')n.push(['login','Log in']);
+ if(u){if(u.role=='CITIZEN')n.push(['dashboard','Dashboard'],['report','Report'],['mine','My reports']);else if(u.role=='OFFICER')n.push(['officer','Office dashboard']);else n.push(['mine','My tasks']);n.push(['out','Log out ('+u.name.split(' ')[0]+')'])}else if(S.view!='landing')n.push(['login','Log in']);
  if(S.view=='landing'&&!u)n.push(['register','Create account']);
  $('#nav').innerHTML=n.map(([k,l])=>`<button class="${S.view==k?'on':''}" onclick="${k=='out'?'logout()':k=='register'?"S.tab='register';go('login')":`go('${k}')`}">${l}</button>`).join('')}
-function render(){document.body.classList.toggle('landing-mode',S.view=='landing');nav();({landing:landing,dashboard:dashboard,feed:feed,report:report,mine:mine,login:login}[S.view]||landing)();scrollTo(0,0)}
+function render(){document.body.classList.toggle('landing-mode',S.view=='landing');nav();({landing:landing,dashboard:dashboard,officer:officerDashboard,feed:feed,report:report,mine:mine,login:login}[S.view]||landing)();scrollTo(0,0)}
 const card=c=>`<div class="card item" onclick="${S.view=='feed'?`trackView('${c.number}')`:`open_(${c.id})`}">${c.imagePath ? `<img data-media="${c.imagePath}" alt="Dumping site" loading="lazy">` : `<div style="height:170px;background:linear-gradient(135deg,#dfe8e5,#f4f7f6);display:flex;align-items:center;justify-content:center;color:#5d7275;font-weight:600">Evidence photo protected</div>`}<div class="b"><span class="pill ${c.status}">${LBL[c.status]}</span> <span class="meta">${c.number} · ${esc(c.category)}</span><p>${esc(c.description)}</p><div class="meta">${esc(c.officeName)} · ${ago(c.createdAt)}</div></div></div>`;
 async function feed(){
   $('#app').innerHTML=`<h1>Civic issues start with a report</h1>
@@ -117,6 +209,28 @@ async function feed(){
 
   await loadProtectedImages($('#list'));
 }
+function passwordRules(password) {
+  return {
+    length: password.length >= 8,
+    upper: /[A-Z]/.test(password),
+    lower: /[a-z]/.test(password),
+    digit: /\d/.test(password),
+    special: /[^A-Za-z0-9]/.test(password)
+  };
+}
+
+function updatePasswordRules() {
+  const password = document.getElementById("pw")?.value || "";
+  const rules = passwordRules(password);
+
+  document.querySelectorAll("#passwordRules [data-rule]")
+    .forEach(item => {
+      item.classList.toggle(
+        "ok",
+        !!rules[item.dataset.rule]
+      );
+    });
+}
 function landing(){
   $('#app').innerHTML=`<div class="landing">
     <section class="hero"><div class="hero-in">
@@ -126,6 +240,8 @@ function landing(){
       <div class="hero-actions"><button class="btn" onclick="S.tab='register';go('login')">Create account</button><button class="btn alt" onclick="S.tab='login';go('login')">Log in</button></div>
       <div class="hero-note">Your report, your voice, your community.</div><div class="hero-scroll">Explore CivicConnect<span>↓</span></div>
     </div></section>
+    <div class="track-gap"></div>
+    <section class="track-band track-top"><div class="track-inner"><div class="track-copy"><h2>Already reported an issue?</h2><p>Enter your complaint number to check its latest status.</p></div><div class="track-form"><input id="landingTrack" placeholder="e.g. CS-2026-000123"><button class="btn" onclick="trackView($('#landingTrack').value)">Track</button></div></div></section>
     <section class="awareness"><div class="awareness-inner">
       <div class="section-kicker">What CivicConnect does</div><h2 class="section-title">One place to report, track and improve your community</h2>
       <p class="section-sub">CivicConnect connects citizens with the configured municipal workflow so a reported issue can move from a photo and location to verification, assignment and resolution.</p>
@@ -150,7 +266,6 @@ function landing(){
       <div class="category-list"><span>♻️ Waste & litter</span><span>🚰 Drainage & water</span><span>🛣️ Public spaces</span><span>🌳 Community cleanliness</span><span>🏙️ Local civic issues</span></div>
     </div></section>
 
-    <section class="track-band"><div class="track-inner"><div class="track-copy"><h2>Already reported an issue?</h2><p>Enter your complaint number to check its latest status.</p></div><div class="track-form"><input id="landingTrack" placeholder="e.g. CS-2026-000123"><button class="btn" onclick="trackView($('#landingTrack').value)">Track</button></div></div></section>
 
     <div class="footer-note">CivicConnect · Report responsibly. Keep your community cleaner.</div>
   </div>`;
@@ -158,17 +273,134 @@ function landing(){
 
 function login(){const r=S.tab=='register',v=S.tab=='otp';
  $('#app').innerHTML=`<div class="card panel">${v?'':`<div class="tabs"><button class="${!r?'on':''}" onclick="S.tab='login';login()">Log in</button><button class="${r?'on':''}" onclick="S.tab='register';login()">Create account</button></div>`}
- ${v?`<h2>Verify your mobile number</h2><p class="sub">Enter the 6-digit verification code sent to +91 XXXXXX${esc(String(S.phone).slice(-4))}.</p><label>OTP</label><input id="otp" inputmode="numeric" maxlength="6" autocomplete="one-time-code"><div id="m"></div><button class="btn block" onclick="verify()">Verify and continue</button><button class="btn alt block" onclick="resend()">Resend OTP</button>`
- :`${r?'<label>Full name</label><input id="nm" autocomplete="name">':''}<label>Mobile number</label><input id="ph" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="tel"><label>Password</label><input id="pw" type="password" autocomplete="${r?'new-password':'current-password'}"><div id="m"></div><button class="btn block" onclick="${r?'register()':'doLogin()'}">${r?'Send OTP':'Log in'}</button><p class="meta" style="margin-top:14px">Municipal officers and cleaning staff log in here with the credentials given by their office.</p>`}</div>`}
-async function register(){try{const d=await api('/auth/register',{method:'POST',json:{name:$('#nm').value,phone:$('#ph').value,password:$('#pw').value}});S.phone=$('#ph').value;S.tab='otp';login();msg('m',d.message,1)}catch(e){msg('m',e.message)}}
-async function resend(){try{const d=await api('/auth/resend',{method:'POST',json:{phone:S.phone}});msg('m',d.message,1)}catch(e){msg('m',e.message)}}
+ ${v?`<h2>Verify your mobile number</h2><p class="sub">Enter the 6-digit verification code sent to +91 XXXXXX${esc(String(S.phone).slice(-4))}.</p>
+ <label>OTP</label>
+
+<input
+  id="otp"
+  inputmode="numeric"
+  maxlength="6"
+  autocomplete="one-time-code"
+>
+
+<div id="otpTimer"
+     class="meta"
+     style="margin-top:8px;font-weight:600">
+  Code expires in 5:00
+</div>
+
+<div id="m"></div>
+
+<button
+  id="verifyBtn"
+  class="btn block"
+  onclick="verify()">
+  Verify and continue
+</button>
+
+<button
+  id="resendBtn"
+  class="btn alt block"
+  disabled
+  onclick="resend()">
+  Resend OTP
+</button>
+ inputmode="numeric" maxlength="6" autocomplete="one-time-code"><div id="m"></div><button class="btn block" onclick="verify()">Verify and continue</button><button class="btn alt block" onclick="resend()">Resend OTP</button>`
+ :`${r?'<label>Full name</label><input id="nm" autocomplete="name">':''}<label>Mobile number</label><input id="ph" inputmode="numeric" maxlength="10" placeholder="10-digit number" autocomplete="tel">
+<label>Password</label>
+
+<div class="password-wrap">
+  <input
+    id="pw"
+    type="password"
+    autocomplete="new-password"
+    oninput="updatePasswordRules()"
+  >
+
+  <button
+    type="button"
+    class="password-toggle"
+    aria-label="Show password"
+    onclick="togglePassword('pw', this)"
+  >👁</button>
+</div>
+
+<ul class="password-rules" id="passwordRules">
+  <li data-rule="length">At least 8 characters</li>
+  <li data-rule="upper">1 uppercase letter</li>
+  <li data-rule="lower">1 lowercase letter</li>
+  <li data-rule="digit">1 digit</li>
+  <li data-rule="special">1 special character</li>
+</ul>
+<div class="password-wrap">
+  <input id="pw" type="password" autocomplete="${r ? 'new-password' : 'current-password'}">
+  <button type="button"
+          class="password-toggle"
+          aria-label="Show password"
+          onclick="togglePassword('pw', this)">👁</button>
+</div> 
+<div id="m"></div><button class="btn block" onclick="${r?'register()':'doLogin()'}">${r?'Send OTP':'Log in'}</button><p class="meta" style="margin-top:14px">Municipal officers and cleaning staff log in here with the credentials given by their office.</p>`}</div>`}
+async function register(){
+  const pw = document.getElementById("pw").value;
+  const rules = passwordRules(pw);
+
+   if (!Object.values(rules).every(Boolean)) {
+      return msg(
+               "m",
+          "Password must be 8+ characters with uppercase, lowercase, number and special character"
+    );
+}
+  try{const d=await api('/auth/register',{method:'POST',json:{name:$('#nm').value,phone:$('#ph').value,password:$('#pw').value}});S.phone=$('#ph').value;S.tab='otp';login();msg('m',d.message,1)}catch(e){msg('m',e.message)}}
+async function resend() {
+  try {
+    const result = await api("/auth/resend", {
+      method: "POST",
+      json: {
+        phone: S.phone
+      }
+    });
+
+    startOtpTimer();
+
+    msg("m", result.message, 1);
+  } catch (e) {
+    msg("m", e.message);
+  }
+}
 function start(d){S.token=d.token;S.user=d.user;localStorage.tok=d.token;localStorage.usr=JSON.stringify(d.user);S.tab='login';go(d.user.role=='CITIZEN'?'dashboard':'mine')}
-async function verify(){try{start(await api('/auth/verify',{method:'POST',json:{phone:S.phone,otp:$('#otp').value}}))}catch(e){msg('m',e.message)}}
+async function verify() {
+  if (Date.now() >= otpExpiresAt) {
+    return msg("m", "This code has expired. Request a new OTP.");
+  }
+
+  const otp = document.getElementById("otp").value;
+
+  if (!/^\d{6}$/.test(otp)) {
+    return msg("m", "Enter the 6-digit OTP");
+  }
+
+  try {
+    const result = await api("/auth/verify", {
+      method: "POST",
+      json: {
+        phone: S.phone,
+        otp: otp
+      }
+    });
+
+    start(result);
+  } catch (e) {
+    msg("m", e.message);
+  }
+}
 async function doLogin(){try{start(await api('/auth/login',{method:'POST',json:{phone:$('#ph').value,password:$('#pw').value}}))}catch(e){msg('m',e.message);if(/Verify/.test(e.message)){S.phone=$('#ph').value}}}
 async function dashboard(){
   if(!S.user)return go('login');
   if(S.user.role!='CITIZEN')return go('mine');
   $('#app').innerHTML=`<div class="dashboard">
+    if (v) {
+       startOtpTimer();
+  }
     <div class="dash-head">
       <div><div class="section-kicker">Citizen dashboard</div><h1>Welcome back, ${esc(S.user.name.split(' ')[0])} 👋</h1><p class="sub">See your reports, track progress, or report a new civic issue.</p></div>
       <div class="dash-actions"><button class="btn" onclick="go('report')">+ Report issue</button></div>
@@ -202,13 +434,354 @@ function report(){if(!S.user)return go('login');S.loc=null;S.photo=null;
  $('#app').innerHTML=`<div class="card panel"><h2>Report a civic issue</h2><p class="sub">Add a photo and your location. We route the report to the nearest configured municipal office.</p>
  <label>Photo of the site</label><label class="drop" id="dz"><input id="img" type="file" accept="image/*" capture="environment" hidden onchange="pick(this)">Take or choose a photo</label>
  <label>Location</label><div class="loc"><span id="lt" style="flex:1">Location not captured yet</span><button class="btn alt" style="margin:0" onclick="gps()">Use my location</button></div>
+ <div id="officePreview" style="margin:10px 0 18px"></div>
  <label>Category</label><select id="cat"></select><label>What is the issue?</label><textarea id="ds" rows="3" maxlength="900" placeholder="e.g. Waste dumped near a drain and blocking the walkway"></textarea><div id="m"></div><button class="btn block" id="sb" onclick="submitC()">Submit complaint</button></div>`;api('/categories').then(l=>$('#cat').innerHTML=l.map(c=>`<option>${esc(c)}</option>`).join(''));gps()}
 function pick(i){const f=i.files[0];if(!f)return;S.photo=f;$('#dz').innerHTML=`<img src="${URL.createObjectURL(f)}" alt="Selected photo">Change photo`;$('#dz').append(i)}
+async function nearestOffice(){if(!S.loc)return;const box=$('#officePreview');if(!box)return;box.innerHTML='<div class="meta">Checking the nearest configured municipal office…</div>';try{const o=await api(`/offices/nearest?lat=${encodeURIComponent(S.loc[0])}&lng=${encodeURIComponent(S.loc[1])}`);const status=o.withinServiceArea?'Within configured service area':'Outside configured service area';const cls=o.withinServiceArea?'ok':'msg';box.innerHTML=`<div class="card" style="padding:14px;background:#f7faf9"><b>Nearest municipal office</b><div style="margin-top:6px">${esc(o.name)}</div><div class="meta">${esc(o.address||o.city)} · ${o.distanceKm} km away · ${esc(status)}</div><a target="_blank" rel="noopener" href="https://www.openstreetmap.org/?mlat=${o.lat}&mlon=${o.lng}#map=15/${o.lat}/${o.lng}" style="display:inline-block;margin-top:8px;color:var(--brand);font-weight:700">View office on map →</a></div>`}catch(e){box.innerHTML=`<div class="msg">${esc(e.message)}</div>`}}
 function gps(){$('#lt').textContent='Finding your location…';if(!navigator.geolocation)return $('#lt').textContent='Location is not supported on this device';
- navigator.geolocation.getCurrentPosition(p=>{S.loc=[p.coords.latitude,p.coords.longitude];$('#lt').innerHTML=`${S.loc[0].toFixed(5)}, ${S.loc[1].toFixed(5)} (±${Math.round(p.coords.accuracy)} m)`},()=>$('#lt').textContent='Allow location access in your browser, then try again',{enableHighAccuracy:true,timeout:15000})}
-async function submitC(){if(!S.photo)return msg('m','Add a photo of the dumping site');if(!S.loc)return msg('m','Capture your location first');if($('#ds').value.trim().length<10)return msg('m','Describe the issue in at least 10 characters');
+ navigator.geolocation.getCurrentPosition(p=>{S.loc=[p.coords.latitude,p.coords.longitude];$('#lt').innerHTML=`${S.loc[0].toFixed(5)}, ${S.loc[1].toFixed(5)} (±${Math.round(p.coords.accuracy)} m)`;nearestOffice()},()=>$('#lt').textContent='Allow location access in your browser, then try again',{enableHighAccuracy:true,timeout:15000})}
+function togglePassword(id, button) {
+  const input = document.getElementById(id);
+
+  if (!input) return;
+
+  if (input.type === "password") {
+    input.type = "text";
+    button.textContent = "🙈";
+    button.setAttribute("aria-label", "Hide password");
+  } else {
+    input.type = "password";
+    button.textContent = "👁";
+    button.setAttribute("aria-label", "Show password");
+  }
+}
+
+function passwordRules(password) {
+  return {
+    length: password.length >= 8,
+    upper: /[A-Z]/.test(password),
+    lower: /[a-z]/.test(password),
+    digit: /\d/.test(password),
+    special: /[^A-Za-z0-9]/.test(password)
+  };
+}
+
+function updatePasswordRules() {
+  const password = document.getElementById("pw")?.value || "";
+  const rules = passwordRules(password);
+
+  document.querySelectorAll("#passwordRules [data-rule]").forEach(item => {
+    item.classList.toggle(
+      "ok",
+      !!rules[item.dataset.rule]
+    );
+  });
+}
+
+function login() {
+  const isRegister = S.tab == "register";
+  const isOtp = S.tab == "otp";
+
+  if (!isOtp) {
+    clearOtpTimer();
+  }
+
+  $('#app').innerHTML = `
+    <div class="card panel">
+
+      ${
+        isOtp
+        ? `
+          <h2>Verify your mobile number</h2>
+
+          <p class="sub">
+            Enter the 6-digit verification code sent to
+            +91 XXXXXX${esc(String(S.phone).slice(-4))}.
+          </p>
+
+          <label>OTP</label>
+
+          <input
+            id="otp"
+            inputmode="numeric"
+            maxlength="6"
+            autocomplete="one-time-code"
+          >
+
+          <div
+            id="otpTimer"
+            class="meta"
+            style="margin-top:8px;font-weight:600"
+          >
+            Code expires in 5:00
+          </div>
+
+          <div id="m"></div>
+
+          <button
+            id="verifyBtn"
+            class="btn block"
+            onclick="verify()"
+          >
+            Verify and continue
+          </button>
+
+          <button
+            id="resendBtn"
+            class="btn alt block"
+            disabled
+            onclick="resend()"
+          >
+            Resend OTP
+          </button>
+        `
+
+        :
+
+        `
+          ${
+            isRegister
+            ? `
+              <h2>Create your CivicConnect account</h2>
+
+              <p class="sub">
+                Register as a citizen to report and track civic issues.
+              </p>
+
+              <label>Full name</label>
+
+              <input
+                id="nm"
+                autocomplete="name"
+                placeholder="Enter your full name"
+              >
+            `
+            :
+            `
+              <h2>Welcome back</h2>
+
+              <p class="sub">
+                Log in to your CivicConnect account.
+              </p>
+            `
+          }
+
+          <label>Mobile number</label>
+
+          <input
+            id="ph"
+            inputmode="tel"
+            autocomplete="tel"
+            placeholder="10-digit mobile number"
+          >
+
+          <label>Password</label>
+
+          <div class="password-wrap">
+
+            <input
+              id="pw"
+              type="password"
+              autocomplete="${isRegister ? "new-password" : "current-password"}"
+              ${
+                isRegister
+                ? `oninput="updatePasswordRules()"`
+                : ``
+              }
+            >
+
+            <button
+              type="button"
+              class="password-toggle"
+              aria-label="Show password"
+              onclick="togglePassword('pw', this)"
+            >
+              👁
+            </button>
+
+          </div>
+
+          ${
+            isRegister
+            ? `
+              <ul
+                class="password-rules"
+                id="passwordRules"
+              >
+                <li data-rule="length">
+                  At least 8 characters
+                </li>
+
+                <li data-rule="upper">
+                  1 uppercase letter
+                </li>
+
+                <li data-rule="lower">
+                  1 lowercase letter
+                </li>
+
+                <li data-rule="digit">
+                  1 digit
+                </li>
+
+                <li data-rule="special">
+                  1 special character
+                </li>
+              </ul>
+
+              <label>Confirm Password</label>
+
+              <div class="password-wrap">
+
+                <input
+                  id="confirmPw"
+                  type="password"
+                  autocomplete="new-password"
+                >
+
+                <button
+                  type="button"
+                  class="password-toggle"
+                  aria-label="Show confirm password"
+                  onclick="togglePassword('confirmPw', this)"
+                >
+                  👁
+                </button>
+
+              </div>
+            `
+            :
+            ``
+          }
+
+          <div id="m"></div>
+
+          <button
+            class="btn block"
+            onclick="${isRegister ? "register()" : "doLogin()"}"
+          >
+            ${isRegister ? "Create account" : "Log in"}
+          </button>
+
+          ${
+            isRegister
+            ? `
+              <p class="meta" style="margin-top:14px;text-align:center">
+                Already have an account?
+                <a href="#" onclick="S.tab='login';login();return false">
+                  Log in
+                </a>
+              </p>
+            `
+            :
+            `
+              <p class="meta" style="margin-top:14px;text-align:center">
+                Don't have an account?
+                <a href="#" onclick="S.tab='register';login();return false">
+                  Create account
+                </a>
+              </p>
+            `
+          }
+
+        `
+      }
+
+    </div>
+  `;
+
+  if (isOtp) {
+    startOtpTimer();
+  }
+
+  if (isRegister) {
+    updatePasswordRules();
+  }
+}
+
+
+async function register() {
+
+  const name = $('#nm').value.trim();
+  const phone = $('#ph').value.trim();
+
+  const password = $('#pw').value;
+  const confirmPassword = $('#confirmPw').value;
+
+  if (name.length < 2) {
+    return msg("m", "Enter your full name");
+  }
+
+  const rules = passwordRules(password);
+
+  if (!Object.values(rules).every(Boolean)) {
+    return msg(
+      "m",
+      "Password must be 8+ characters with uppercase, lowercase, number and special character"
+    );
+  }
+
+  if (password !== confirmPassword) {
+    return msg(
+      "m",
+      "Passwords do not match"
+    );
+  }
+
+  try {
+
+    const d = await api("/auth/register", {
+      method: "POST",
+
+      json: {
+        name: name,
+        phone: phone,
+        password: password
+      }
+    });
+
+    S.phone = phone;
+    S.tab = "otp";
+
+    login();
+
+    msg("m", d.message, 1);
+
+  } catch (e) {
+
+    msg("m", e.message);
+
+  }
+}
+ async function submitC(){if(!S.photo)return msg('m','Add a photo of the dumping site');if(!S.loc)return msg('m','Capture your location first');if($('#ds').value.trim().length<10)return msg('m','Describe the issue in at least 10 characters');
  const f=new FormData();f.append('image',S.photo);f.append('lat',S.loc[0]);f.append('lng',S.loc[1]);f.append('description',$('#ds').value);f.append('category',$('#cat').value);$('#sb').disabled=true;
  try{const c=await api('/complaints',{method:'POST',body:f});go('mine');open_(c.id)}catch(e){msg('m',e.message);$('#sb').disabled=false}}
+async function officerDashboard(){
+  if(!S.user)return go('login');
+  if(S.user.role!='OFFICER')return go(S.user.role=='CITIZEN'?'dashboard':'mine');
+  $('#app').innerHTML=`<div class="officer-dashboard">
+    <div class="off-head">
+      <div><div class="section-kicker">Officer dashboard</div><h1>Office operations</h1><p class="sub">Review complaints routed to your office, prioritize urgent work, and assign crew.</p></div>
+      <div class="off-actions"><button class="btn alt" onclick="officerDashboard()">Refresh</button></div>
+    </div>
+    <div class="off-stats">
+      <div class="off-stat"><div class="icon">📋</div><b id="ofTotal">—</b><span>Total complaints</span></div>
+      <div class="off-stat"><div class="icon">🔄</div><b id="ofActive">—</b><span>Active</span></div>
+      <div class="off-stat"><div class="icon">⚠️</div><b id="ofUrgent">—</b><span>High priority</span></div>
+      <div class="off-stat"><div class="icon">✓</div><b id="ofDone">—</b><span>Completed / resolved</span></div>
+    </div>
+    <div class="off-section"><div class="off-section-head"><h2>Current complaint queue</h2><button class="dash-link" onclick="go('mine')">View all →</button></div><div id="offQueue"></div></div>
+  </div>`;
+  try{
+    const l=await api('/complaints/mine');
+    const active=l.filter(c=>['REPORTED','VERIFIED','ASSIGNED','ACCEPTED','IN_PROGRESS','REOPENED'].includes(c.status));
+    const urgent=l.filter(c=>['HIGH','CRITICAL'].includes(String(c.priority||'').toUpperCase()) && !['COMPLETED','RESOLVED','REJECTED'].includes(c.status));
+    const done=l.filter(c=>['COMPLETED','RESOLVED'].includes(c.status));
+    $('#ofTotal').textContent=l.length; $('#ofActive').textContent=active.length; $('#ofUrgent').textContent=urgent.length; $('#ofDone').textContent=done.length;
+    const queue=active.slice().sort((a,b)=>{const p={CRITICAL:0,HIGH:1,MEDIUM:2,LOW:3};const pa=p[String(a.priority||'').toUpperCase()]??9,pb=p[String(b.priority||'').toUpperCase()]??9;return pa-pb||new Date(a.createdAt)-new Date(b.createdAt)}).slice(0,8);
+    $('#offQueue').innerHTML=queue.length?`<div class="off-queue">${queue.map(c=>`<div class="off-row" onclick="open_(${c.id})"><div class="off-row-main"><b>${esc(c.number)} · ${esc(c.category)}</b><span>${esc(c.description)} · ${esc(c.officeName)} · ${ago(c.createdAt)}</span></div><div class="off-row-side">${['HIGH','CRITICAL'].includes(String(c.priority||'').toUpperCase())?`<div class="off-priority">${esc(c.priority)} priority</div>`:''}<span class="pill ${c.status}">${LBL[c.status]}</span></div></div>`).join('')}</div>`:`<div class="off-empty">No active complaints in your office right now. 🎉</div>`;
+  }catch(e){$('#offQueue').innerHTML=`<div class="msg">${esc(e.message)}</div>`}
+}
 async function mine(){if(!S.user)return go('login');const o=S.user.role=='OFFICER';$('#app').innerHTML=`<h1>${o?'Complaints for your office':S.user.role=='CREW'?'Cleaning tasks assigned to you':'My reports'}</h1><p class="sub" id="ss"></p><div class="grid" id="list"></div>`;
  const l=await api('/complaints/mine');$('#ss').textContent=l.length+' complaint'+(l.length==1?'':'s');
  $('#list').innerHTML=l.length?l.map(card).join(''):`<div class="empty" style="grid-column:1/-1">${S.user.role=='CITIZEN'?'You have not reported anything yet.':'Nothing here yet.'}</div>`; await loadProtectedImages($('#list'))}
@@ -225,5 +798,5 @@ async function assign(id){try{await api(`/officer/complaints/${id}/assign`,{meth
 async function post(id){const f=new FormData();f.append('status',$('#us').value);f.append('note',$('#un').value);if($('#ui').files[0])f.append('image',$('#ui').files[0]);
  try{await api(`/complaints/${id}/updates`,{method:'POST',body:f});$('.modal').remove();open_(id);if(S.view=='mine')mine()}catch(e){msg('m',e.message)}}
 document.addEventListener('keydown',e=>{if(e.key=='Escape')$('.modal')?.remove()});
-S.view=S.user?(S.user.role!='CITIZEN'?'mine':'dashboard'):'landing';render();
+S.view=S.user?(S.user.role=='CITIZEN'?'dashboard':S.user.role=='OFFICER'?'officer':'mine'):'landing';render();
 </script></body></html>

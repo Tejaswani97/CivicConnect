@@ -13,6 +13,12 @@ public class OfficeService {
   /** Nearest ACTIVE office whose service radius contains the point; empty if the area is not served. */
   public Optional<Office> nearest(double lat, double lng) { return nearest(repo.findAll(), lat, lng); }
 
+  /** Nearest ACTIVE office regardless of service radius, for location preview. */
+  public Optional<Office> nearestAny(double lat, double lng) {
+    return repo.findAll().stream().filter(o -> o.active)
+        .min(Comparator.comparingDouble(o -> km(lat, lng, o.lat, o.lng)));
+  }
+
   static Optional<Office> nearest(List<Office> all, double lat, double lng) {
     return all.stream().filter(o -> o.active).filter(o -> km(lat, lng, o.lat, o.lng) <= o.serviceRadiusKm)
         .min(Comparator.comparingDouble(o -> km(lat, lng, o.lat, o.lng)));
